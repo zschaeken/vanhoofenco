@@ -144,15 +144,17 @@ ul {
   right: 0;
   z-index: 1000;
   height: var(--header-h);
-  background: var(--navy);
+  background: var(--white);
   display: flex;
   align-items: center;
   transition: box-shadow var(--transition), background var(--transition);
 }
 
+
+
 #site-header.scrolled {
   box-shadow: 0 2px 20px rgba(0,0,0,0.25);
-  background: var(--navy-dark);
+  background: var(--white);
 }
 
 #site-header .container {
@@ -176,7 +178,7 @@ ul {
 .main-nav a {
   font-size: 0.9rem;
   font-weight: 500;
-  color: rgba(255,255,255,0.82);
+  color: var(--navy);
   transition: color var(--transition);
   position: relative;
   padding-bottom: 2px;
@@ -195,7 +197,7 @@ ul {
 
 .main-nav a:hover,
 .main-nav a.active {
-  color: var(--white);
+  color: var(--navy-dark);
 }
 
 .main-nav a:hover::after,
@@ -207,7 +209,7 @@ ul {
 .lang-toggle {
   display: flex;
   align-items: center;
-  background: rgba(255,255,255,0.12);
+  background: var(--light-bg);
   border-radius: 50px;
   padding: 3px;
   gap: 2px;
@@ -220,7 +222,7 @@ ul {
   cursor: pointer;
   font-size: 0.8rem;
   font-weight: 700;
-  color: rgba(255,255,255,0.65);
+  color: var(--navy);
   padding: 5px 12px;
   border-radius: 50px;
   transition: all var(--transition);
@@ -530,7 +532,7 @@ ul {
 
 /* ---------- About ---------- */
 #over-ons {
-  padding: 150px 0;
+  padding: 170px 0;
   background: var(--light-bg);
 }
 
@@ -612,7 +614,7 @@ ul {
 
 /* ---------- Realisaties ---------- */
 #realisaties {
-  padding: 120px 0;
+  padding: 140px 0;
   background: var(--white);
 }
 
@@ -803,7 +805,7 @@ ul {
 .footer-logo img {
   height: 34px;
   width: auto;
-  opacity: 0.85;
+  opacity: 0.85;  
 }
 
 .footer-copy {
