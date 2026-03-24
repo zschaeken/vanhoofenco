@@ -175,7 +175,7 @@ ul {
 }
 
 .header-logo img {
-  height: 42px;
+  height: 60px;
   width: auto;
 }
 
@@ -374,7 +374,7 @@ ul {
 .hero-title {
   font-size: clamp(2rem, 4.5vw, 3.5rem);
   font-weight: 900;
-  color: var(--white);
+  color: var(--navy);
   line-height: 1.12;
 }
 
@@ -772,6 +772,7 @@ ul {
 
 .hours-table td {
   padding: 3px 0;
+  padding-right: 12px;
   color: var(--text);
 }
 
@@ -838,7 +839,7 @@ ul {
 }
 
 .footer-logo img {
-  height: 34px;
+  height: 50px;
   width: auto;
   opacity: 0.85;  
 }
@@ -880,6 +881,16 @@ ul {
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+.reveal-delay-7 { transition-delay: 0.7s; }
+
+/* ---------- Responsive: Medium (≤ 1023px, ≥ 768px) ---------- */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 /* ---------- Responsive: Tablet (≤ 1023px) ---------- */
 @media (max-width: 1023px) {
@@ -984,6 +995,11 @@ ul {
   .hero-image img {
     max-height: 55vw;
     object-fit: cover;
+  }
+
+  .hero-inner {
+    padding: 40px 0 56px;
+    gap: 28px;
   }
 }
 

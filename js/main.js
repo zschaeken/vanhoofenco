@@ -75,7 +75,7 @@ const translations = {
     'lbl-hours':       'Openingsuren',
     'hours-mon-fri':   'Maandag – vrijdag',
     'hours-sat-sun':   'Zaterdag – zondag',
-    'hours-closed':    'Gesloten',
+    'hours-closed':    'telefonisch',
     'cta-call-label':  'Bel ons direct',
     'cta-call-btn':    'Bel 014\u00a031\u00a071\u00a029',
 
@@ -156,7 +156,7 @@ const translations = {
     'lbl-hours':       'Opening hours',
     'hours-mon-fri':   'Monday – Friday',
     'hours-sat-sun':   'Saturday – Sunday',
-    'hours-closed':    'Closed',
+    'hours-closed':    'Telephonically',
     'cta-call-label':  'Call us directly',
     'cta-call-btn':    'Call 014\u00a031\u00a071\u00a029',
 
