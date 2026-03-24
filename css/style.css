@@ -215,36 +215,6 @@ ul {
   width: 100%;
 }
 
-/* Language toggle */
-.lang-toggle {
-  display: flex;
-  align-items: center;
-  background: var(--light-bg);
-  border-radius: 50px;
-  padding: 3px;
-  gap: 2px;
-  flex-shrink: 0;
-}
-
-.lang-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--navy);
-  padding: 5px 12px;
-  border-radius: 50px;
-  transition: all var(--transition);
-  font-family: inherit;
-  min-height: 32px;
-}
-
-.lang-btn.active {
-  background: var(--orange);
-  color: var(--white);
-}
-
 /* Hamburger */
 .hamburger {
   display: none;
@@ -439,6 +409,7 @@ ul {
   aspect-ratio: 520 / 416;
   border-radius: 16px;
   box-shadow: var(--shadow-lg);
+  object-fit: cover;
 }
 
 .scroll-hint {
@@ -468,7 +439,11 @@ ul {
 
 /* ---------- Services ---------- */
 #diensten {
-  padding: 100px 0;
+  min-height: calc(100vh - var(--header-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px 0;
   background: var(--white);
 }
 
@@ -544,7 +519,11 @@ ul {
 
 /* ---------- About ---------- */
 #over-ons {
-  padding: 170px 0;
+  min-height: calc(100vh - var(--header-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px 0;
   background: var(--light-bg);
 }
 
@@ -624,11 +603,16 @@ ul {
   aspect-ratio: 480 / 365;
   border-radius: 16px;
   box-shadow: var(--shadow-lg);
+  object-fit: cover;
 }
 
 /* ---------- Realisaties ---------- */
 #realisaties {
-  padding: 130px 0;
+  min-height: calc(100vh - var(--header-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px 0;
   background: var(--white);
 }
 
@@ -679,9 +663,46 @@ ul {
   font-weight: 600;
 }
 
+.gallery-item.gallery-placeholder {
+  background: var(--light-bg);
+  border: 2px dashed var(--border);
+  box-shadow: none;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-item.gallery-placeholder:hover img {
+  transform: none;
+}
+
+.placeholder-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+}
+
+.placeholder-inner svg {
+  color: var(--border);
+}
+
+.placeholder-inner span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 /* ---------- Contact ---------- */
 #contact {
-  padding: 100px 0;
+  min-height: calc(100vh - var(--header-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px 0;
   background: var(--light-bg);
 }
 
@@ -900,6 +921,7 @@ ul {
   .hero-image {
     max-width: 440px;
     margin: 0 auto;
+    width: 100%;
   }
 
   .gallery-grid {
@@ -955,7 +977,13 @@ ul {
   #over-ons,
   #realisaties,
   #contact {
-    padding: 72px 0;
+    padding: 56px 0;
+    min-height: unset;
+  }
+
+  .hero-image img {
+    max-height: 55vw;
+    object-fit: cover;
   }
 }
 

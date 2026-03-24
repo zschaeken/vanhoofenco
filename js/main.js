@@ -14,9 +14,10 @@ const translations = {
 
     /* Hero */
     'hero-title-1':    'Uw specialist in',
-    'hero-title-2':    'verwarming',
+    'hero-title-2':    'verwarming,',
     'hero-title-3':    '&',
     'hero-title-4':    'airconditioning',
+    'hero-title-5':    'sanitair',
     'hero-desc':       'Meer dan 40 jaar ervaring in installatie, onderhoud en herstelling van centrale verwarmingssystemen en airconditioning. Lokale service, professioneel uitgevoerd.',
     'hero-cta-contact':'Neem contact op',
     'hero-cta-call':   '014\u00a031\u00a071\u00a029',
@@ -33,6 +34,12 @@ const translations = {
     'srv3-desc':       'Snelle diagnose en herstelling van storingen aan cv-ketels of verwarmingssystemen. Geen warmte? Wij lossen het op.',
     'srv4-title':      'Airconditioning',
     'srv4-desc':       'Levering en installatie van airconditioningsystemen voor een comfortabel binnenklimaat het hele jaar door.',
+    'srv5-title':      'Sanitair',
+    'srv5-desc':       'Installatie van sanitaire toestellen en badkamerrenovaties voor een moderne, functionele ruimte.',
+    'srv6-title':      'Badkamerrenovatie',
+    'srv6-desc':       'Installatie en renovatie van badkamers.',
+    'srv7-title':      'Schouwvegen',
+    'srv7-desc':       'Veiligheid voorop: professioneel schouwvegen van uw schoorsteen en rookkanalen.',
 
     /* About */
     'about-tag':       'Over Van Hoof & Co',
@@ -51,10 +58,12 @@ const translations = {
     'gallery-tag':     'Ons werk',
     'gallery-title':   'Recente realisaties',
     'gallery-sub':     'Een greep uit ons werk.',
-    'gallery1-cap':    'Moderne airco-installatie',
-    'gallery2-cap':    'comfortabele badkamer',
-    'gallery3-cap':    'Efficiënte cv-ketel',
-    'gallery4-cap':    'Buffervat met ketel',
+    'gallery1-cap':      'Moderne airco-installatie',
+    'gallery2-cap':      'Comfortabele badkamer',
+    'gallery3-cap':      'Efficiënte cv-ketel',
+    'gallery4-cap':      'Boiler en ketel',
+    'gallery5-cap':      'Buffer tank',
+    'gallery6-cap':      'Airconditioning muurunit',
 
     /* Contact */
     'contact-tag':     'Contact',
@@ -71,7 +80,7 @@ const translations = {
     'cta-call-btn':    'Bel 014\u00a031\u00a071\u00a029',
 
     /* Footer */
-    'footer-copy':     '© 2025 Van Hoof & Co bvba — Herdersstraat 16, 2400 Mol',
+    'footer-copy':     '© 2025 Van Hoof & Co bv — Herdersstraat 16, 2400 Mol',
     'footer-privacy':  'Privacy',
     'footer-top':      'Naar boven',
   },
@@ -106,11 +115,17 @@ const translations = {
     'srv3-desc':       'Fast diagnosis and repair of faults in your boiler or heating system. No heat? We fix it.',
     'srv4-title':      'Air conditioning',
     'srv4-desc':       'Supply and installation of air conditioning systems for a comfortable indoor climate year-round.',
+    'srv5-title':      'Sanitary installations',
+    'srv5-desc':       'Installation of sanitary fixtures and bathroom renovations for a modern, functional space.',
+    'srv6-title':      'Bathroom renovation',
+    'srv6-desc':       'Installation and renovations of bathrooms.',
+    'srv7-title':      'Chimney sweeping',
+    'srv7-desc':       'Safety first: professional chimney sweeping of your flue and ducts.',
 
     /* About */
     'about-tag':       'About Van Hoof & Co',
     'about-title':     'Your trusted local partner',
-    'about-p1':        'Van Hoof & Co is a familie bedrijf en bvba (private limited company) founded in 1979, based in Mol. With a small, dedicated team of skilled technicians, we work exclusively for residential customers in the region.',
+    'about-p1':        'Van Hoof & Co is a familie bedrijf en bv (private limited company) founded in 1979, based in Mol. With a small, dedicated team of skilled technicians, we work exclusively for residential customers in the region.',
     'about-p2':        'Our strength lies in personal contact, quality workmanship, and honest pricing. You call us, we show up. From the first quote to the last bolt – always finished with care.',
     'badge1-title':    '40+ years of experience',
     'badge1-sub':      'Active in the sector since 1979',
@@ -124,10 +139,12 @@ const translations = {
     'gallery-tag':     'Our work',
     'gallery-title':   'Recent projects',
     'gallery-sub':     'A selection of our work – from heating installations to air conditioning projects.',
-    'gallery1-cap':    'Modern air conditioning installation',
-    'gallery2-cap':    'Comfortable bathroom',
-    'gallery3-cap':    'Efficient boiler',
-    'gallery4-cap':    'Buffer tank with boiler',
+    'gallery1-cap':      'Modern air conditioning installation',
+    'gallery2-cap':      'Comfortable bathroom',
+    'gallery3-cap':      'Efficient boiler',
+    'gallery4-cap':      'Boiler and heating system',
+    'gallery5-cap':      'Buffer tank',
+    'gallery6-cap':      'Air conditioning wall unit',
 
     /* Contact */
     'contact-tag':     'Contact',
@@ -144,34 +161,27 @@ const translations = {
     'cta-call-btn':    'Call 014\u00a031\u00a071\u00a029',
 
     /* Footer */
-    'footer-copy':     '© 2025 Van Hoof & Co bvba — Herdersstraat 16, 2400 Mol',
+    'footer-copy':     '© 2025 Van Hoof & Co bv — Herdersstraat 16, 2400 Mol',
     'footer-privacy':  'Privacy',
     'footer-top':      'Back to top',
   }
 };
 
-/* ---------- Language toggle ---------- */
-let currentLang = localStorage.getItem('vhc-lang') || 'nl';
+/* ---------- Language: auto-detect from browser ---------- */
+function detectLang() {
+  const lang = (navigator.language || navigator.userLanguage || 'nl').toLowerCase();
+  return lang.startsWith('en') ? 'en' : 'nl';
+}
 
 function applyLang(lang) {
-  currentLang = lang;
-  localStorage.setItem('vhc-lang', lang);
+  const t = translations[lang] || translations.nl;
 
-  const t = translations[lang];
-
-  // Swap all [data-i18n] elements
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
     if (t[key] !== undefined) el.textContent = t[key];
   });
 
-  // Update html lang attribute
   document.documentElement.lang = lang;
-
-  // Update toggle buttons
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
 }
 
 /* ---------- Header: scroll shadow ---------- */
@@ -261,10 +271,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initHamburger();
   initReveal();
   initSmoothScroll();
-  applyLang(currentLang);
-
-  // Language buttons
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => applyLang(btn.dataset.lang));
-  });
+  applyLang(detectLang());
 });
