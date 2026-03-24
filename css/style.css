@@ -106,6 +106,7 @@ ul {
   color: var(--orange);
   border-color: var(--orange);
 }
+
 .btn-primary:hover {
   background: var(--orange-dark);
   border-color: var(--orange-dark);
@@ -767,7 +768,7 @@ ul {
 }
 
 .cta-call-block span {
-  color: rgba(255,255,255,0.8);
+  color: var(--white);
   font-size: 0.95rem;
 }
 
@@ -959,5 +960,14 @@ ul {
   .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .btn-footer {
+    color: var(--white);
+    background-color: var(--orange);
+  }
+
+  .btn-footer:hover {
+    background-color: var(--orange-dark);
   }
 }
