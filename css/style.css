@@ -530,7 +530,7 @@ ul {
 
 /* ---------- About ---------- */
 #over-ons {
-  padding: 100px 0;
+  padding: 150px 0;
   background: var(--light-bg);
 }
 
@@ -612,7 +612,7 @@ ul {
 
 /* ---------- Realisaties ---------- */
 #realisaties {
-  padding: 100px 0;
+  padding: 120px 0;
   background: var(--white);
 }
 
