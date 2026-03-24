@@ -54,6 +54,7 @@ const translations = {
     'gallery1-cap':    'Moderne airco-installatie',
     'gallery2-cap':    'comfortabele badkamer',
     'gallery3-cap':    'Efficiënte cv-ketel',
+    'gallery4-cap':    'Buffervat met ketel',
 
     /* Contact */
     'contact-tag':     'Contact',
@@ -123,9 +124,10 @@ const translations = {
     'gallery-tag':     'Our work',
     'gallery-title':   'Recent projects',
     'gallery-sub':     'A selection of our work – from heating installations to air conditioning projects.',
-    'gallery1-cap':    'Boiler installation – Mol',
-    'gallery2-cap':    'Annual service – Dessel',
-    'gallery3-cap':    'Air conditioning – Geel',
+    'gallery1-cap':    'Modern air conditioning installation',
+    'gallery2-cap':    'Comfortable bathroom',
+    'gallery3-cap':    'Efficient boiler',
+    'gallery4-cap':    'Buffer tank with boiler',
 
     /* Contact */
     'contact-tag':     'Contact',
