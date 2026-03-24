@@ -103,13 +103,13 @@ ul {
 }
 
 .btn-primary {
-  background: var(--orange);
-  color: var(--white);
+  color: var(--orange);
   border-color: var(--orange);
 }
 .btn-primary:hover {
   background: var(--orange-dark);
   border-color: var(--orange-dark);
+  color: var(--light-bg);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(248, 135, 62, 0.35);
 }
@@ -404,7 +404,7 @@ ul {
 
 .hero-desc {
   font-size: 1.05rem;
-  color: var(--orange);
+  color: var(--navy);
   max-width: 480px;
   line-height: 1.7;
 }
