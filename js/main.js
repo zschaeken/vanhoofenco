@@ -46,6 +46,7 @@ const translations = {
     'badge3-sub':      'Gevestigd in Mol, voor de regio',
 
     /* Gallery */
+    'gallery1-tag':     'Wie zijn wij',
     'gallery-tag':     'Ons werk',
     'gallery-title':   'Recente realisaties',
     'gallery-sub':     'Een greep uit ons werk.',
@@ -116,6 +117,7 @@ const translations = {
     'badge3-sub':      'Based in Mol, serving the region',
 
     /* Gallery */
+    'gallery1-tag':     'Who we are',
     'gallery-tag':     'Our work',
     'gallery-title':   'Recent projects',
     'gallery-sub':     'A selection of our work – from heating installations to air conditioning projects.',
