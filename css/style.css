@@ -322,7 +322,7 @@ ul {
 /* ---------- Hero ---------- */
 #home {
   min-height: 100vh;
-  background: var(--navy);
+  background: var(--light-bg);
   display: flex;
   align-items: center;
   padding-top: var(--header-h);
@@ -399,12 +399,12 @@ ul {
 }
 
 .hero-title span {
-  color: var(--orange);
+  color: var(--navy-dark);
 }
 
 .hero-desc {
   font-size: 1.05rem;
-  color: rgba(255,255,255,0.72);
+  color: var(--orange);
   max-width: 480px;
   line-height: 1.7;
 }
@@ -438,7 +438,7 @@ ul {
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  color: rgba(255,255,255,0.45);
+  color: var(--navy);
   font-size: 0.75rem;
   animation: bounce 2s infinite;
   z-index: 1;
@@ -614,7 +614,7 @@ ul {
 
 /* ---------- Realisaties ---------- */
 #realisaties {
-  padding: 120px 0;
+  padding: 140px 0;
   background: var(--white);
 }
 

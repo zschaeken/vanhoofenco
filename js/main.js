@@ -13,9 +13,8 @@ const translations = {
     'nav-contact':     'Contact',
 
     /* Hero */
-    'hero-tag':        '✦ Erkend installateur – Mol, België',
-    'hero-title-1':    'Uw specialist in',
-    'hero-title-2':    'verwarming &',
+    'hero-title-1':    'Uw specialist in verwarming',
+    'hero-title-2':    '&',
     'hero-title-3':    'airconditioning',
     'hero-desc':       'Meer dan 40 jaar ervaring in installatie, onderhoud en herstelling van centrale verwarmingssystemen en airconditioning. Lokale service, professioneel uitgevoerd.',
     'hero-cta-contact':'Neem contact op',
