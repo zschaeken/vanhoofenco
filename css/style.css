@@ -126,6 +126,15 @@ ul {
   transform: translateY(-2px);
 }
 
+.btn-footer {
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+.btn-footer:hover {
+  background-color: var(--orange-dark);
+}
+
 .btn-outline-navy {
   background: transparent;
   color: var(--navy);
@@ -619,7 +628,7 @@ ul {
 
 /* ---------- Realisaties ---------- */
 #realisaties {
-  padding: 150px 0;
+  padding: 145px 0;
   background: var(--white);
 }
 
@@ -960,14 +969,5 @@ ul {
   .btn {
     width: 100%;
     justify-content: center;
-  }
-
-  .btn-footer {
-    color: var(--white);
-    background-color: var(--orange);
-  }
-
-  .btn-footer:hover {
-    background-color: var(--orange-dark);
   }
 }
