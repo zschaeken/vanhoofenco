@@ -264,6 +264,40 @@ function initSmoothScroll() {
   });
 }
 
+/* ---------- Lightbox ---------- */
+function initLightbox() {
+  const lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.innerHTML = `<button class="lightbox-close" aria-label="Sluiten">&times;</button><img class="lightbox-img" src="" alt="" />`;
+  document.body.appendChild(lb);
+
+  const lbImg = lb.querySelector('.lightbox-img');
+  const closeBtn = lb.querySelector('.lightbox-close');
+
+  function open(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      open(img.src, img.alt);
+    });
+  });
+
+  closeBtn.addEventListener('click', close);
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+}
+
 /* ---------- Init ---------- */
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
@@ -271,5 +305,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initHamburger();
   initReveal();
   initSmoothScroll();
+  initLightbox();
   applyLang(detectLang());
 });
